@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body{
+  font-family: 'Montserrat Altranates', sans-serif;
+  font-size: 16px;
+}
+p{
+  font-size: 16;
+  line-height: 24px;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  max-width: 1000px;
+  margin: auto;
+}
+section{
+  margin: 80px 0;
+
+}
+.img {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: block;
+  overflow: hidden;
+}
+.content{
+  position: absolute;
+    top: 25%;
+    right: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 650px;
+}
+p{
+  margin-top: 20px;
+}
+h1{
+  font-size: 40px;
+}
+/* .specialdishes{
+  text-align: center;
+} */
+.specialdishes .container{
+  width: 800px;
+  text-align: center;
+} 
+.specialdishes .container p{
+  line-height: 25px;
+}
+
+.specialdishes-menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* width: 250px;
+  height: 50px; */
+}
+.specialdishes-menu li img{
+  width: 250px;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 10px;
+}
+.specialdishes-menu{
+  margin-top: 50px;
+}
+.specialdishes-menu a{
+  text-decoration: none;
+  color: black;
+}
+
+/* filterdishes */
+
+.filter-text{
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+.filter-dish{
+  text-align: center;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+}
+.filter-dish ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.filter-dish li{
+  background-color: rgb(255, 156, 8);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+/* .filter-dish .active{
+  background-color: black;
+} */
+.filter-dish li:hover{
+  background-color: rgb(18, 18, 18);
+}
+.filterhandlerclass li img{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover; /* Ensures image fills the box consistently */
+}
+.filterhandlerclass li h5{
+  text-align: center;
+  margin: 10px 0 0; /* Adds consistent space above text */
+}
+.filterhandlerclass{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.filterhandlerclass ul{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ensures 5 items per row */
+  gap: 20px; /* Adds consistent spacing between items */
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove default list styling */
+  
+}
+.filterhandlerclass li {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.filter-dish li.active{
+  background-color: rgb(23, 23, 23);
+}
+
+.sorrybox{
+  grid-column: 1 / -1; 
+  width: 1000px;
+  border: 2px solid rgb(255, 0, 0);
+  height: 100px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sorrybox h3{
+  color: red;
+}
+.popupmain{
+  position: absolute;
+}
+
+/* pagination */
+
+.center{
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.pagination{
+  display: inline-block;
+}
+.pagination li{
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.pagination li.active {
+  background-color:rgb(255, 156, 8);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 156, 8);
+}
+.pagination li:hover:not(.active) {
+  background-color: #a1a1a1;
+}
+
+/* popup */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+  padding-top: 50px;
+}
+
+.popup-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.popupbutton{
+  background-color: rgb(255, 156, 8);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  border: none;
+}
+.popupbutton:hover{
+  background-color: rgb(249, 195, 1);
+  color: black;
+}
+
